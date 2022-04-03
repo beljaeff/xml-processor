@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:address-request xmlns:ns="address-request-validation">
+	<action>CREATE</action>
+	<message>
+		<address>
+			<postal-index>111222</postal-index>
+			<country>Россия</country>
+			<city>Москва</city>
+			<street>Красная площадь</street>
+			<house-number>1</house-number>
+			<apartment-number>2</apartment-number>
+		</address>
+		<owner>
+			<id>123e4567-e89b-12d3-a456-426655440000</id>
+			<type>PERSON</type>
+		</owner>
+	</message>
+</ns:address-request>

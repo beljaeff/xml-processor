@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:ar="address-request"
+			targetNamespace="address-request-validation">
+
+	<xs:import namespace="address-request" schemaLocation="../types/address/address-request.xsd"/>
+
+	<xs:annotation>
+		<xs:documentation>Scheme for validation address request</xs:documentation>
+	</xs:annotation>
+
+	<xs:element name="address-request" type="ar:address-request">
+		<xs:annotation>
+			<xs:documentation>Address request</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+</xs:schema>

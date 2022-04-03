@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:r="request"
+           xmlns:m="message"
+           xmlns:a="address"
+           xmlns:o="owner"
+           xmlns:ar="address-request"
+           targetNamespace="address-request">
+
+<xs:import namespace="request" schemaLocation="../common/request.xsd"/>
+<xs:import namespace="message" schemaLocation="../common/message.xsd"/>
+<xs:import namespace="owner" schemaLocation="../common/owner.xsd"/>
+<xs:import namespace="address" schemaLocation="address.xsd"/>
+
+<xs:complexType name="address-request">
+    <xs:complexContent>
+        <xs:extension base="r:base-request">
+            <xs:sequence>
+                <xs:choice>
+                    <xs:element name="message" type="ar:address-message">
+                        <xs:annotation>
+                            <xs:documentation>Message with single content</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="messages" type="ar:address-message" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Message with multiple content</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:choice>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="address-message">
+    <xs:complexContent>
+        <xs:extension base="m:base-message">
+            <xs:sequence>
+                <xs:element name="address" type="a:address">
+                    <xs:annotation>
+                        <xs:documentation>Address</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="owner" type="o:owner">
+                    <xs:annotation>
+                        <xs:documentation>Address owner descriptor</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:r="request"
+           xmlns:m="message"
+           xmlns:bi="basket-item"
+           xmlns:o="owner"
+           xmlns:br="basket-request"
+           targetNamespace="basket-request">
+
+<xs:import namespace="request" schemaLocation="../common/request.xsd"/>
+<xs:import namespace="message" schemaLocation="../common/message.xsd"/>
+<xs:import namespace="owner" schemaLocation="../common/owner.xsd"/>
+<xs:import namespace="basket-item" schemaLocation="basket-item.xsd"/>
+
+<xs:complexType name="basket-request">
+    <xs:complexContent>
+        <xs:extension base="r:base-request">
+            <xs:sequence>
+                <xs:choice>
+                    <xs:element name="message" type="br:basket-message">
+                        <xs:annotation>
+                            <xs:documentation>Message with single content</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="messages" type="br:basket-message" maxOccurs="unbounded">
+                        <xs:annotation>
+                            <xs:documentation>Message with multiple content</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:choice>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="basket-message">
+    <xs:complexContent>
+        <xs:extension base="m:base-message">
+            <xs:sequence>
+                <xs:element name="basket-item" type="bi:basket-item">
+                    <xs:annotation>
+                        <xs:documentation>Basket item</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="owner" type="o:owner">
+                    <xs:annotation>
+                        <xs:documentation>Basket item owner descriptor</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+</xs:schema>

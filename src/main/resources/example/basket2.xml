@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:BasketRequest xmlns:ns="basket-request-validation">
+	<action>DELETE</action>
+	<messages>
+		<basket-item>
+			<product>Продукт 2</product>
+			<count>44</count>
+		</basket-item>
+		<owner>
+			<id>123e4567-e89b-12d3-a456-426655444401</id>
+			<type>PERSON</type>
+		</owner>
+	</messages>
+	<messages>
+		<basket-item>
+			<product>Продукт 3</product>
+			<count>1</count>
+		</basket-item>
+		<owner>
+			<id>123e4567-e89b-12d3-a456-426655445502</id>
+			<type>PERSON</type>
+		</owner>
+	</messages>
+</ns:BasketRequest>

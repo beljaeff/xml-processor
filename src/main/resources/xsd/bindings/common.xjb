@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jaxb:bindings jaxb:version="2.1"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+               xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance"
+               xmlns:annox="http://annox.dev.java.net"
+               jaxb:extensionBindingPrefixes="xjc inheritance annox">
+
+    <jaxb:globalBindings>
+        <xjc:serializable uid="1"/>
+    </jaxb:globalBindings>
+
+    <jaxb:bindings schemaLocation="../schema/types/common/primitive.xsd" node="//xs:schema">
+        <jaxb:schemaBindings>
+            <jaxb:package name="com.github.beljaeff.xmlprocessor.model.common.primitive"/>
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+
+    <jaxb:bindings schemaLocation="../schema/types/common/message.xsd" node="//xs:schema">
+        <jaxb:schemaBindings>
+            <jaxb:package name="com.github.beljaeff.xmlprocessor.model.common.message"/>
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+
+    <jaxb:bindings schemaLocation="../schema/types/common/request.xsd" node="//xs:schema">
+        <jaxb:schemaBindings>
+            <jaxb:package name="com.github.beljaeff.xmlprocessor.model.common.request"/>
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+
+    <jaxb:bindings schemaLocation="../schema/types/common/owner.xsd" node="//xs:schema">
+        <jaxb:schemaBindings>
+            <jaxb:package name="com.github.beljaeff.xmlprocessor.model.common.owner"/>
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+
+</jaxb:bindings>

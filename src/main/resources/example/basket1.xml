@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:BasketRequest xmlns:ns="basket-request-validation">
+	<action>CREATE</action>
+	<message>
+		<basket-item>
+			<product>Продукт1</product>
+			<count>3</count>
+		</basket-item>
+		<owner>
+			<id>123e4567-e89b-12d3-a456-426655441100</id>
+			<type>PERSON</type>
+		</owner>
+	</message>
+</ns:BasketRequest>

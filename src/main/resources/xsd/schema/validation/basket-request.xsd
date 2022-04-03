@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:br="basket-request"
+			targetNamespace="basket-request-validation">
+
+	<xs:import namespace="basket-request" schemaLocation="../types/basket/basket-request.xsd"/>
+
+	<xs:annotation>
+		<xs:documentation>Scheme for validation basket request</xs:documentation>
+	</xs:annotation>
+
+	<xs:element name="BasketRequest" type="br:basket-request">
+		<xs:annotation>
+			<xs:documentation>Basket request</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+</xs:schema>

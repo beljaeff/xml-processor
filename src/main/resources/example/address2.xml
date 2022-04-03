@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:address-request xmlns:ns="address-request-validation">
+	<action>UPDATE</action>
+	<messages>
+		<address>
+			<postal-index>333444</postal-index>
+			<country>Россия</country>
+			<city>Тверь</city>
+			<street>Московская ул.</street>
+			<house-number>12</house-number>
+			<apartment-number>24</apartment-number>
+		</address>
+		<owner>
+			<id>123e4567-e89b-12d3-a456-426655440001</id>
+			<type>PERSON</type>
+		</owner>
+	</messages>
+	<messages>
+		<address>
+			<postal-index>666555</postal-index>
+			<country>Россия</country>
+			<city>Владивосток</city>
+			<street>Ленинская ул.</street>
+			<house-number>15</house-number>
+			<apartment-number>12</apartment-number>
+		</address>
+		<owner>
+			<id>123e4567-e89b-12d3-a456-426655440002</id>
+			<type>PERSON</type>
+		</owner>
+	</messages>
+</ns:address-request>

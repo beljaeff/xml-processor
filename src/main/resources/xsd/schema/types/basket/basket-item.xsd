@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:p="primitive"
+            targetNamespace="basket-item">
+
+    <xs:import namespace="primitive" schemaLocation="../common/primitive.xsd"/>
+
+    <xs:complexType name="basket-item">
+        <xs:sequence>
+            <xs:element name="id" type="p:uuid" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Identifier</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="product" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Product  name</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="count" type="p:product-count">
+                <xs:annotation>
+                    <xs:documentation>Product count</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

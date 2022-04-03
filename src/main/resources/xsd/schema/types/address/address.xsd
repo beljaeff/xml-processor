@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:p="primitive"
+            targetNamespace="address">
+
+    <xs:import namespace="primitive" schemaLocation="../common/primitive.xsd"/>
+
+    <xs:complexType name="address">
+        <xs:sequence>
+            <xs:element name="id" type="p:uuid" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Identifier</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="postal-index" type="p:postal-index">
+                <xs:annotation>
+                    <xs:documentation>Postal index</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="country" type="p:country">
+                <xs:annotation>
+                    <xs:documentation>Country</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="city" type="p:city">
+                <xs:annotation>
+                    <xs:documentation>City</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="street" type="p:street">
+                <xs:annotation>
+                    <xs:documentation>Street</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="house-number" type="p:house-number">
+                <xs:annotation>
+                    <xs:documentation>House number</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="apartment-number" type="p:apartment-number">
+                <xs:annotation>
+                    <xs:documentation>Apartment number</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

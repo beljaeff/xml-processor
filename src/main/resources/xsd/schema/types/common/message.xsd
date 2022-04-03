@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="message">
+
+    <xs:complexType name="base-message">
+        <xs:annotation>
+            <xs:documentation>Base message type</xs:documentation>
+        </xs:annotation>
+    </xs:complexType>
+
+</xs:schema>

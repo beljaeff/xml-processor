@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:p="primitive"
+           xmlns:o="owner"
+           targetNamespace="owner">
+
+    <xs:import namespace="primitive" schemaLocation="primitive.xsd"/>
+
+    <xs:complexType name="owner">
+        <xs:annotation>
+            <xs:documentation>Owner for the request message entity</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="p:uuid">
+                <xs:annotation>
+                    <xs:documentation>Identifier</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="type" type="o:owner-type"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="owner-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PERSON" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
